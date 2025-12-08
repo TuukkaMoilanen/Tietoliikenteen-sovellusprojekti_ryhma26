@@ -14,7 +14,7 @@ Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyv
 | **nRF5340DK** | Kiihtyvyysdatan mittaus ja BLE-lähetys |
 | **Kiihtyvyysanturi** | X/Y/Z signaali |
 | **Raspberry Pi** | BLE-vastaanotin, HTTP Post → Ubuntu |
-| **Ubuntu Server** | MySQL-tietokanta |
+| **Ubuntu Server** | MySQL-tietokanta, REST API|
 | **Kehitysläppäri / PC** | analytiikka, GitHub |
 
 
