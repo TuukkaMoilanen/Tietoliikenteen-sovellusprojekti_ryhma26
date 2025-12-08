@@ -1,16 +1,27 @@
 # Tietoliikenteen-sovellusprojekti
 
+## Projektin kuvaus
+Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle. Raspberry välittää dataa omalle ja tai Oamkin MySQL-palvelimelle.
+
+
+### Arkkitehtuurikuva projektista 
 <img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
 
-Tutustu markdown-kuvauskieleen:
-Ohje Githubissa
-Katso markdown-esimerkiksi tämän saman sivun index.md tai tämän pilvipalvelukurssin index.md markdown-tiedosto. Sivut on generoitu Pandoc-työkalulla HTML:ksi
+## Projektissa käytetyt laitteet 
+NRF5340DK
+Rasperry Pi
+Ubuntu serveri
 
-Kirjoita Github-projektille kuvaus markdownilla (readme.md-tiedosto). Github osaa prosessoida markdown-kieltä suoraan readme.md:stä HTML:ksi
-Muista päivittää omaa projektikuvausta Githubissa (readme.md) myöhemmin!
-Esimerkkejä hyvistä readme-projektitiedostoista
-Teemun tekemä yksinkertainen esimerkki: https://github.com/t2946282/demoproject
+## Projektissa tehdyt ohjelmat
 
-## Projektin tehtävä
+1. Ohjelma kiihtyvyysdatan mittaukseen ja lähetykseen
 
-Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle. Raspberry välittää dataa omalle ja tai Oamkin MySQL-palvelimelle.
+2. Python TCP/socket ohjelma
+
+3. Pythonilla tietokannan luku ohjelma
+
+4. Python K-means algoritmi
+
+5. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
+
+   
