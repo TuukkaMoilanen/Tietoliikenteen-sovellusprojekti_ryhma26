@@ -20,14 +20,23 @@ Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyv
 
 ## Projektissa tehdyt ohjelmat
 
-1. Ohjelma kiihtyvyysdatan mittaukseen ja lähetykseen
+1. Ohjelma kiihtyvyysdatan mittaukseen ja lähetykseen (nRF5340DK + GY-61)
+   Ohjelman toiminta:
 
-2. Python TCP/socket ohjelma
+   Lukee kiihtyvyysanturilta X-, Y- ja Z-akselien analogiset jännitearvot SAADC-moduulin avulla.
 
-3. Pythonilla tietokannan luku ohjelma
+   Muuntaa arvot digitaaliseen muotoon ja normalisoi ne käsittelyä varten.
 
-4. Python K-means algoritmi
+   Pakkaa mittaustulokset BLE-lähetyspakettiin.
 
-5. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
+   Lähettää kiihtyvyysdatan Bluetooth Low Energy -yhteydellä Raspberry Pi:lle.
+
+3. Python TCP/socket ohjelma
+
+4. Pythonilla tietokannan luku ohjelma
+
+5. Python K-means algoritmi
+
+6. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
 
    
