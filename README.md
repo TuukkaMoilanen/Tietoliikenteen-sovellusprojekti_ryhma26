@@ -4,7 +4,7 @@
 Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle. Raspberry välittää dataa omalle ja tai Oamkin MySQL-palvelimelle.
 
 
-### Arkkitehtuurikuva projektista 
+## Arkkitehtuurikuva projektista 
 <img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
 
 ## Projektissa käytetyt laitteet
