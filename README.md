@@ -45,6 +45,18 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
    Ohjelman toiminta:
 
+   Lataa tietokannasta tai tiedostosta esikäsitellyt kiihtyvyysarvot.
+
+   Alustaa satunnaiset keskipisteet
+
+   Sijoittaa datapisteet lähimpään klusteriin
+
+   Päivittää keskipisteet ja toistaa prosessin, kunnes tulos ei enää muutu
+
+   Piirtää datan ja klusterit 3D-kuviona
+
+   Tallentaa lopulliset keskipisteet C-kieliseen header-tiedostoon (keskipisteet.h)
+
 9. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
 
     Ohjelman toiminta:
