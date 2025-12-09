@@ -27,7 +27,7 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
 **Ohjelman toiminta:**
 - Lukee X-, Y- ja Z-akselien analogiset arvot SAADC-moduulilla  
-- Muuntaa arvot digitaaliseen muotoon ja normalisoi  
+- Muuntaa arvot digitaaliseen muotoon 
 - Pakkaa mittaustulokset BLE-lähetyspakettiin  
 - Lähettää datan BLE-yhteydellä Raspberry Pi:lle  
 
