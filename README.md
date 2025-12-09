@@ -21,44 +21,58 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
 ## Projektissa tehdyt ohjelmat
 
-1. Ohjelma kiihtyvyysdatan mittaukseen ja lähetykseen (nRF5340DK + GY-61)
-   
-   Ohjelman toiminta:
+---
 
-   Lukee kiihtyvyysanturilta X-, Y- ja Z-akselien analogiset jännitearvot SAADC-moduulin avulla.
+### **1. Kiihtyvyysdatan mittaus ja lähetys (nRF5340DK + GY-61)**
 
-   Muuntaa arvot digitaaliseen muotoon ja normalisoi ne käsittelyä varten.
+**Ohjelman toiminta:**
+- Lukee X-, Y- ja Z-akselien analogiset arvot SAADC-moduulilla  
+- Muuntaa arvot digitaaliseen muotoon ja normalisoi  
+- Pakkaa mittaustulokset BLE-lähetyspakettiin  
+- Lähettää datan BLE-yhteydellä Raspberry Pi:lle  
 
-   Pakkaa mittaustulokset BLE-lähetyspakettiin.
+---
 
-   Lähettää kiihtyvyysdatan Bluetooth Low Energy -yhteydellä Raspberry Pi:lle.
+### **2. Python TCP/Socket -ohjelma**
 
-3. Python TCP/socket ohjelma
+**Ohjelman toiminta:**
+- Vastaanottaa tai lähettää kiihtyvyysdataa TCP-yhteydellä  
+- Tallentaa vastaanotetun datan analyysiä varten  
+- Toimi testivaiheen yhteysratkaisuna ennen lopullista REST API -toteutusta  
 
-   Ohjelman toiminta:
+---
 
-5. Pythonilla tietokannan luku ohjelma
+### **3. Python-tietokantaohjelma (MySQL)**
 
-   Ohjelman toiminta:
+**Ohjelman toiminta:**
+- Yhdistyy MySQL-tietokantaan  
+- Lukee kiihtyvyysdatan tauluista  
+- Esikäsittelee datan (suodatus, normalisointi, segmentointi)  
+- Syöttää datan analytiikkaohjelmille  
 
-7. Python K-means algoritmi
+---
 
-   Ohjelman toiminta:
+### **4. Python K-means -algoritmi**
 
-   Lataa tietokannasta tai tiedostosta esikäsitellyt kiihtyvyysarvot.
+**Ohjelman toiminta:**
+- Lataa tietokannasta tai tiedostosta esikäsitellyt kiihtyvyysarvot  
+- Alustaa satunnaiset keskipisteet  
+- Sijoittaa datapisteet lähimpään klusteriin  
+- Päivittää keskipisteet, kunnes tulos vakioituu  
+- Visualisoi datan ja klusterit 3D-kuviona  
+- Tallentaa lopulliset keskipisteet C-kieliseen header-tiedostoon (`keskipisteet.h`)  
 
-   Alustaa satunnaiset keskipisteet
+---
 
-   Sijoittaa datapisteet lähimpään klusteriin
+### **5. NRF5340DK – K-means-toteutus ja suorituskyvyn mittaus**
 
-   Päivittää keskipisteet ja toistaa prosessin, kunnes tulos ei enää muutu
+**Ohjelman toiminta:**
+- Toteuttaa kevyen K-means-algoritmin sulautetulle laitteelle  
+- Lataa esimerkkidatasarjan laitteelle  
+- Suorittaa klusteroinnin nRF5340:n prosessorilla  
+- Mittaa suorituskyvyn (aika, muistinkäyttö)  
+- Arvioi, soveltuuko algoritmi reaaliaikaisesti ajettavaksi laitteessa  
 
-   Piirtää datan ja klusterit 3D-kuviona
-
-   Tallentaa lopulliset keskipisteet C-kieliseen header-tiedostoon (keskipisteet.h)
-
-9. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
-
-    Ohjelman toiminta:
+---
 
    
