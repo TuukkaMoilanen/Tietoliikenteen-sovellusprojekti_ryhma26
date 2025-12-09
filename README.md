@@ -35,7 +35,7 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
 3. Python TCP/socket ohjelma
 
-   Ohjelman toiminta:
+   #Ohjelman toiminta:
 
 5. Pythonilla tietokannan luku ohjelma
 
