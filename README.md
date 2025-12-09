@@ -22,6 +22,7 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 ## Projektissa tehdyt ohjelmat
 
 1. Ohjelma kiihtyvyysdatan mittaukseen ja lähetykseen (nRF5340DK + GY-61)
+   
    Ohjelman toiminta:
 
    Lukee kiihtyvyysanturilta X-, Y- ja Z-akselien analogiset jännitearvot SAADC-moduulin avulla.
@@ -34,10 +35,18 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
 3. Python TCP/socket ohjelma
 
-4. Pythonilla tietokannan luku ohjelma
+   Ohjelman toiminta:
 
-5. Python K-means algoritmi
+5. Pythonilla tietokannan luku ohjelma
 
-6. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
+   Ohjelman toiminta:
+
+7. Python K-means algoritmi
+
+   Ohjelman toiminta:
+
+9. NRF5340DK:lle ohjelma K-means algoritmin toteutukseen ja algoritmin suorituskyvyn mittaukseen
+
+    Ohjelman toiminta:
 
    
