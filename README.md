@@ -137,6 +137,6 @@ Projektissa opittiin yhdistämään useita eri teknologia-alueita:
 - datan analytiikka, esikäsittely ja koneoppiminen  
 - järjestelmäarkkitehtuurin suunnittelu sensorista tietokantaan ja analytiikkaan  
 
-Kokonaisuutena projekti onnistui hyvin ja tarjosi käytännön kokemusta IoT-järjestelmien rakentamisesta. Tulokset osoittavat, että kevyitä koneoppimismenetelmiä kuten K-means voidaan hyödyntää sulautetuissa ympäristöissä tietyin rajoittein. Projekti muodostaa vahvan pohjan mahdolliselle jatkokehitykselle, kuten reaaliaikaiselle liikkeentunnistukselle tai laajemmalle datankeruujärjestelmälle.
+Kokonaisuutena projekti onnistui hyvin ja tarjosi käytännön kokemusta IoT-järjestelmien rakentamisesta. Tulokset osoittavat, että kevyitä koneoppimismenetelmiä kuten K-means voidaan hyödyntää sulautetuissa ympäristöissä tietyin rajoittein. Projekti muodostaa vahvan pohjan mahdolliselle jatkokehitykselle, kuten reaaliaikaiselle liikkeentunnistukselle tai laajemmalle datankeruu- ja käsittelyjärjestelmälle.
 
    
