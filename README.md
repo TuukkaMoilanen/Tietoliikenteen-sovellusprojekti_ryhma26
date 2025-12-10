@@ -120,7 +120,7 @@ Projektissa onnistuttiin rakentamaan toimiva end-to-end -ratkaisu:
 
 Kokonaisjärjestelmä toimii vakaasti ja täyttää projektin tavoitteet.
 
-## 9. Johtopäätökset
+## Johtopäätökset
 
 Projektissa opittiin yhdistämään useita eri teknologia-alueita:
 
