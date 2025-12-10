@@ -61,7 +61,8 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 - Päivittää keskipisteet, kunnes tulos vakioituu  
 - Visualisoi datan ja klusterit 3D-kuviona
 
-  
+  <img width="400" height="270" alt="image" src="https://github.com/user-attachments/assets/96ef006d-45d5-4153-84c1-047c4756632c" />
+
   <img width="400" height="270" alt="image" src="https://github.com/user-attachments/assets/757498ac-db44-49b3-a7c7-65627d418319" />
 
 - Tallentaa lopulliset keskipisteet C-kieliseen header-tiedostoon (`keskipisteet.h`)  
