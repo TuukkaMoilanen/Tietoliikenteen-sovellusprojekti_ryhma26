@@ -55,6 +55,24 @@ def initialize_centroids(data, K=6):
 
     return centroids
 
+def sort_centroids_for_accelerometer(centroids):
+    sorted_list = [None] * 6
+
+    x_min = np.argmin(centroids[:,0])   # x-
+    x_max = np.argmax(centroids[:,0])   # x+
+    y_min = np.argmin(centroids[:,1])   # y-
+    y_max = np.argmax(centroids[:,1])   # y+
+    z_min = np.argmin(centroids[:,2])   # z-
+    z_max = np.argmax(centroids[:,2])   # z+
+
+    sorted_list[0] = centroids[z_max]
+    sorted_list[1] = centroids[z_min]
+    sorted_list[2] = centroids[y_max]
+    sorted_list[3] = centroids[y_min]
+    sorted_list[4] = centroids[x_max]
+    sorted_list[5] = centroids[x_min]
+
+    return np.array(sorted_list)
 
 """Etsitään jokaisen datapisteen lähin keskipiste"""
 def step1_assign(data, centroids):
@@ -175,6 +193,9 @@ if __name__ == "__main__":
     """Kmeans opetus"""
     print("Aloitetaan k-means opetus…")
     centroids = kmeans_train(xyz)
+
+    """Järjestetään pisteet"""
+    centroids = sort_centroids_for_accelerometer(centroids)
 
     """C tiedosto"""
     write_centroids_to_header(centroids)
