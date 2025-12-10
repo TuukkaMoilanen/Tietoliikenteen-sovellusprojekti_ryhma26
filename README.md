@@ -2,15 +2,18 @@
 
 ## Projektin kuvaus
 
-Projektin tarkoituksena oli toteuttaa sulautettu järjestelmä, joka mittaa kiihtyvyysdataa nRF5340-kehitysalustalla ja välittää sen langattomasti Raspberry Pi:lle Bluetooth Low Energy -yhteyden avulla. Raspberry Pi vastaanottaa datan ja siirtää sen edelleen palvelimelle, jossa Ubuntu Server -ympäristö ja MySQL-tietokanta tallentavat tiedot jatkokäsittelyä varten.
+Projektin tehtävänä oli suunnitella nRF5340-kehitysalustalla ajettava ohjelma, joka mittaa kiihtyvyysanturin dataa ja välittää mitatun datan Raspberry Pi:lle Bluetooth Low Energy -yhteyden kautta. Raspberry Pi välittää vastaanottamansa datan MySQL-tietokantaan.
 
-Kerättyä mittausdataa hyödynnetään Pythonilla toteutetussa analytiikassa ja koneoppimisessa (K-means). Kokonaisuus yhdistää sulautetun laiteohjelmoinnin, tietoliikenteen, palvelinpuolen ohjelmoinnin ja data-analytiikan.
+Tietokantaan tallentuvaan dataan toteutettiin TCP-sokettirajapinta sekä yksinkertainen HTTP-rajapinta. Kerättyä dataa haetaan HTTP-rajapinnan kautta omaan kannettavaan tietokoneeseen Pythonilla koodatulla ohjelmalla, jossa dataa esikäsitellään ja hyödynnetään koneoppimisessa.
+
+Projektissa yhdistyvät laiteohjelmointi, tietoliikenne, palvelinohjelmointi ja koneoppimisen perusteet.
+
 
 ## Projektin tavoitteet
 
 Projektin päätavoitteet olivat:
 
-- Suunnitella ohjelmisto nRF5340-alustalle kiihtyvyysdatan mittaamiseen SAADC-moduulilla  
+- Suunnitella ohjelmisto nRF5340-alustalle kiihtyvyysdatan mittaamiseen 
 - Toteuttaa BLE-pohjainen tiedonsiirto Raspberry Pi:lle  
 - Rakentaa Raspberry Pi:lle vastaanottava BLE-klientti ja HTTP-lähetysjärjestelmä  
 - Luoda Ubuntu Serverille MySQL-tietokanta ja REST API datan tallentamiseen ja hakemiseen  
