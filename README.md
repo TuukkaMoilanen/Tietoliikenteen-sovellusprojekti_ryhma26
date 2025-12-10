@@ -1,9 +1,22 @@
 # Tietoliikenteen-sovellusprojekti
 
 ## Projektin kuvaus
-Tehtävänä on suunnitella nRF5340:llä client, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle. Raspberry välittää dataa omalle ja tai Oamkin MySQL-palvelimelle.
+Projektin tehtävä oli suunnitella nRF5340:llä ohjelma, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle Bluetooth Low Energyllä. Raspberry välittää dataa omalle ja/ tai Oamkin MySQL-palvelimelle.
 Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin MySQL) ja yksinkertainen HTTP API (edelleen, jos Oamkin tietokanta käytössä). Kerättyä dataa haetaan HTTP-rajanpinnasta omaan kannettavaan koodatulla Python-ohjelmalla ja käsitellään koneoppimistarkoituksiin.
 
+Projektissa yhdistyvät laiteohjelmointi, tietoliikenne, palvelinohjelmointi ja koneoppimisen perusteet. 
+
+
+## Projektin tavoitteet
+
+**Projektin päätavoitteet:**
+Suunnitella ohjelmisto nRF5340-alustalle kiihtyvyysdatan mittaamiseen
+Toteuttaa BLE-pohjainen tiedonsiirto Raspberry Pi:lle
+Rakentaa Raspberry Pi:lle vastaanottava BLE-klientti ja HTTP-lähetysjärjestelmä
+Luoda Ubuntu Serverille MySQL-tietokanta ja REST API datan tallentamiseen ja hakemiseen
+Toteuttaa Python-ohjelmistot datan analysointiin ja koneoppimiseen (K-means)
+Arvioida K-means-algoritmin suorituskykyä sulautetussa laitteessa
+Dokumentoida järjestelmä ja arkkitehtuuri selkeästi
 
 ## Arkkitehtuurikuva projektista 
 <img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
@@ -17,6 +30,18 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 | **Raspberry Pi** | BLE-vastaanotin, HTTP Post → Ubuntu |
 | **Ubuntu Server** | MySQL-tietokanta, REST API|
 | **Kehitysläppäri / PC** | analytiikka, GitHub |
+
+## Käytetyt teknologiat ja työkalut
+
+| Osa-alue | Teknologiat |
+|----------|-------------|
+| Sulautettu laite | C, Zephyr RTOS, nRF Connect SDK, SAADC |
+| Langaton tiedonsiirto | Bluetooth Low Energy (BLE) |
+| Raspberry Pi | Python, BluePy / Bleak, Requests |
+| Palvelin | Ubuntu Server, MySQL, Python/Flask |
+| Datan analytiikka | Python, NumPy, Pandas, Matplotlib |
+| Koneoppiminen | K-means klusterointi |
+| Versionhallinta | Git ja GitHub |
 
 
 ## Projektissa tehdyt ohjelmat
@@ -79,5 +104,27 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 - Arvioi, soveltuuko algoritmi reaaliaikaisesti ajettavaksi laitteessa  
 
 ---
+## Projektin tulokset
+
+Projektissa onnistuttiin rakentamaan toimiva end-to-end -ratkaisu:
+
+- nRF5340 mittaa kiihtyvyysdatan ja lähettää sen BLE-yhteydellä Raspberry Pi:lle  
+- Raspberry Pi vastaanottaa datan ja välittää sen HTTP POST -pyynnöllä palvelimelle  
+- Ubuntu Server tallentaa datan MySQL-tietokantaan ja tarjoaa REST API -rajapinnan  
+- Python-ohjelmat hakevat datan API:n kautta ja suorittavat esikäsittelyn sekä K-means -klusteroinnin  
+- Lopulliset klusterikeskipisteet voidaan viedä takaisin sulautetulle laitteelle C-header -tiedostona  
+
+Kokonaisjärjestelmä toimii vakaasti ja täyttää projektin tavoitteet. Toteutus osoitti, että sensoridataa voidaan kerätä, tallentaa ja analysoida tehokkaasti hajautetussa IoT-arkkitehtuurissa.
+
+## 9. Johtopäätökset
+
+Projektissa opittiin yhdistämään useita eri teknologia-alueita:
+
+- sulautetun laitteen signaalinkäsittely ja BLE-tiedonsiirto  
+- palvelin- ja tietokantaohjelmointi  
+- datan analytiikka, esikäsittely ja koneoppiminen  
+- järjestelmäarkkitehtuurin suunnittelu sensorista tietokantaan ja analytiikkaan  
+
+Kokonaisuutena projekti onnistui hyvin ja tarjosi käytännön kokemusta IoT-järjestelmien rakentamisesta. Tulokset osoittavat, että kevyitä koneoppimismenetelmiä kuten K-means voidaan hyödyntää sulautetuissa ympäristöissä tietyin rajoittein. Projekti muodostaa vahvan pohjan mahdolliselle jatkokehitykselle, kuten reaaliaikaiselle liikkeentunnistukselle tai laajemmalle datankeruujärjestelmälle.
 
    
