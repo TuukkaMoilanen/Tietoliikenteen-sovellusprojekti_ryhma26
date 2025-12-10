@@ -37,8 +37,8 @@ Dokumentoida järjestelmä ja arkkitehtuuri selkeästi
 |----------|-------------|
 | Sulautettu laite | C, Zephyr RTOS, nRF Connect SDK, SAADC |
 | Langaton tiedonsiirto | Bluetooth Low Energy (BLE) |
-| Raspberry Pi | Python, BluePy / Bleak, Requests |
-| Palvelin | Ubuntu Server, MySQL, Python/Flask |
+| Raspberry Pi | Python, Bleak |
+| Palvelin | Ubuntu Server, MySQL, Python |
 | Datan analytiikka | Python, NumPy, Pandas, Matplotlib |
 | Koneoppiminen | K-means klusterointi |
 | Versionhallinta | Git ja GitHub |
@@ -114,7 +114,7 @@ Projektissa onnistuttiin rakentamaan toimiva end-to-end -ratkaisu:
 - Python-ohjelmat hakevat datan API:n kautta ja suorittavat esikäsittelyn sekä K-means -klusteroinnin  
 - Lopulliset klusterikeskipisteet voidaan viedä takaisin sulautetulle laitteelle C-header -tiedostona  
 
-Kokonaisjärjestelmä toimii vakaasti ja täyttää projektin tavoitteet. Toteutus osoitti, että sensoridataa voidaan kerätä, tallentaa ja analysoida tehokkaasti hajautetussa IoT-arkkitehtuurissa.
+Kokonaisjärjestelmä toimii vakaasti ja täyttää projektin tavoitteet.
 
 ## 9. Johtopäätökset
 
