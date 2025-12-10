@@ -98,14 +98,18 @@ Projektin päätavoitteet olivat:
 
 ---
 
-### **5. NRF5340DK – K-means-toteutus ja suorituskyvyn mittaus**
+### **5. nRF5340DK – K-means-luokittelijan toteutus**
 
 **Ohjelman toiminta:**
 - Toteuttaa kevyen K-means-algoritmin sulautetulle laitteelle  
-- Lataa esimerkkidatasarjan laitteelle  
-- Suorittaa klusteroinnin nRF5340:n prosessorilla  
-- Mittaa suorituskyvyn (aika, muistinkäyttö)  
-- Arvioi, soveltuuko algoritmi reaaliaikaisesti ajettavaksi laitteessa
+- Lataa kiihtyvyysdatan laitteelle  
+- Suorittaa klusteroinnin nRF5340DK kehitysalustalle
+- Päivittää confusion matriisin
+
+  **Miten confusion matriisi toteutettiin:**
+  Confusion-matriisi lasketaan siten, että jokaisen luokittelun jälkeen päivitetään matriisin solu C[i][j], jossa  i on todellinen luokka ja j ennustettu luokka. Jos järjestelmä ennustaa oikein, kyseisen solun arvoa kasvatetaan yhdellä: C[i][i]=C[i][i]+1. Toistamalla    tämä kaikille näytteille saadaan matriisi, joka kuvaa, kuinka usein kukin luokka ennustettiin oikein tai väärin.
+  Matriisin päädiagonaali sisältää kaikki oikein luokitellut näytteet, ja mitä tarkempi luokitin on, sitä suuremmiksi diagonaalin arvot kasvavat.
+  Diagonaalin ulkopuoliset solut puolestaan kuvaavat virheellisiä ennusteita ja pysyvät pieninä, jos luokitin toimii hyvin.
 
   
   <img width="464" height="284" alt="image" src="https://github.com/user-attachments/assets/66929f37-2e7e-48fc-ae4e-e8c001b327eb" />
