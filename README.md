@@ -6,7 +6,7 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 
 
 ## Arkkitehtuurikuva projektista 
-<img width="168" height="80" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
+<img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
 
 ## Projektissa käytetyt laitteet
 
@@ -60,7 +60,7 @@ Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin
 - Sijoittaa datapisteet lähimpään klusteriin  
 - Päivittää keskipisteet, kunnes tulos vakioituu  
 - Visualisoi datan ja klusterit 3D-kuviona
-  <img width="1150" height="901" alt="image" src="https://github.com/user-attachments/assets/757498ac-db44-49b3-a7c7-65627d418319" />
+  <img width="115" height="90" alt="image" src="https://github.com/user-attachments/assets/757498ac-db44-49b3-a7c7-65627d418319" />
 
 - Tallentaa lopulliset keskipisteet C-kieliseen header-tiedostoon (`keskipisteet.h`)  
 
