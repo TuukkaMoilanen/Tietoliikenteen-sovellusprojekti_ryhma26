@@ -1,7 +1,5 @@
 # Tietoliikenteen-sovellusprojekti
 
-# Tietoliikenteen-sovellusprojekti
-
 ## Projektin kuvaus
 
 Projektin tarkoituksena oli toteuttaa sulautettu järjestelmä, joka mittaa kiihtyvyysdataa nRF5340-kehitysalustalla ja välittää sen langattomasti Raspberry Pi:lle Bluetooth Low Energy -yhteyden avulla. Raspberry Pi vastaanottaa datan ja siirtää sen edelleen palvelimelle, jossa Ubuntu Server -ympäristö ja MySQL-tietokanta tallentavat tiedot jatkokäsittelyä varten.
