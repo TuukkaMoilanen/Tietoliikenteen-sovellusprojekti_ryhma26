@@ -1,22 +1,25 @@
 # Tietoliikenteen-sovellusprojekti
 
+# Tietoliikenteen-sovellusprojekti
+
 ## Projektin kuvaus
-Projektin tehtävä oli suunnitella nRF5340:llä ohjelma, joka mittaa anturidataa kiihtyvyysanturilla ja välittää tietoa Raspberry Pi:lle Bluetooth Low Energyllä. Raspberry välittää dataa omalle ja/ tai Oamkin MySQL-palvelimelle.
-Tietokantaan tallentuvaan dataan on TCP-sokettirajapinta (jos käytössä Oamkin MySQL) ja yksinkertainen HTTP API (edelleen, jos Oamkin tietokanta käytössä). Kerättyä dataa haetaan HTTP-rajanpinnasta omaan kannettavaan koodatulla Python-ohjelmalla ja käsitellään koneoppimistarkoituksiin.
 
-Projektissa yhdistyvät laiteohjelmointi, tietoliikenne, palvelinohjelmointi ja koneoppimisen perusteet. 
+Projektin tarkoituksena oli toteuttaa sulautettu järjestelmä, joka mittaa kiihtyvyysdataa nRF5340-kehitysalustalla ja välittää sen langattomasti Raspberry Pi:lle Bluetooth Low Energy -yhteyden avulla. Raspberry Pi vastaanottaa datan ja siirtää sen edelleen palvelimelle, jossa Ubuntu Server -ympäristö ja MySQL-tietokanta tallentavat tiedot jatkokäsittelyä varten.
 
+Kerättyä mittausdataa hyödynnetään Pythonilla toteutetussa analytiikassa ja koneoppimisessa (K-means). Kokonaisuus yhdistää sulautetun laiteohjelmoinnin, tietoliikenteen, palvelinpuolen ohjelmoinnin ja data-analytiikan.
 
 ## Projektin tavoitteet
 
-**Projektin päätavoitteet:**
-Suunnitella ohjelmisto nRF5340-alustalle kiihtyvyysdatan mittaamiseen
-Toteuttaa BLE-pohjainen tiedonsiirto Raspberry Pi:lle
-Rakentaa Raspberry Pi:lle vastaanottava BLE-klientti ja HTTP-lähetysjärjestelmä
-Luoda Ubuntu Serverille MySQL-tietokanta ja REST API datan tallentamiseen ja hakemiseen
-Toteuttaa Python-ohjelmistot datan analysointiin ja koneoppimiseen (K-means)
-Arvioida K-means-algoritmin suorituskykyä sulautetussa laitteessa
-Dokumentoida järjestelmä ja arkkitehtuuri selkeästi
+Projektin päätavoitteet olivat:
+
+- Suunnitella ohjelmisto nRF5340-alustalle kiihtyvyysdatan mittaamiseen SAADC-moduulilla  
+- Toteuttaa BLE-pohjainen tiedonsiirto Raspberry Pi:lle  
+- Rakentaa Raspberry Pi:lle vastaanottava BLE-klientti ja HTTP-lähetysjärjestelmä  
+- Luoda Ubuntu Serverille MySQL-tietokanta ja REST API datan tallentamiseen ja hakemiseen  
+- Toteuttaa Python-ohjelmistot datan esikäsittelyyn, analysointiin ja K-means -klusterointiin  
+- Arvioida K-means -algoritmin suorituskykyä sulautetulla laitteella  
+- Dokumentoida järjestelmä ja sen arkkitehtuuri selkeästi  
+
 
 ## Arkkitehtuurikuva projektista 
 <img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
