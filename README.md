@@ -105,7 +105,9 @@ Projektin päätavoitteet olivat:
 - Lataa esimerkkidatasarjan laitteelle  
 - Suorittaa klusteroinnin nRF5340:n prosessorilla  
 - Mittaa suorituskyvyn (aika, muistinkäyttö)  
-- Arvioi, soveltuuko algoritmi reaaliaikaisesti ajettavaksi laitteessa  
+- Arvioi, soveltuuko algoritmi reaaliaikaisesti ajettavaksi laitteessa
+  <img width="464" height="284" alt="image" src="https://github.com/user-attachments/assets/66929f37-2e7e-48fc-ae4e-e8c001b327eb" />
+
 
 ---
 ## Projektin tulokset
