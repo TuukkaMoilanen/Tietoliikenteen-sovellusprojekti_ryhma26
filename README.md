@@ -44,8 +44,8 @@ Projektin päätavoitteet olivat:
 | Raspberry Pi | Python, Bleak |
 | Palvelin | Ubuntu Server, MySQL, Python |
 | Datan analytiikka | Python, NumPy, Pandas, Matplotlib |
-| Koneoppiminen | K-means klusterointi |
-| Versionhallinta | Git ja GitHub |
+| Koneoppiminen | K-means |
+| Versionhallinta | GitHub |
 
 
 ## Projektissa tehdyt ohjelmat
