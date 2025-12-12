@@ -23,9 +23,10 @@ Projektin päätavoitteet olivat:
 
 
 ## Arkkitehtuurikuva projektista 
-<img width="1680" height="804" alt="Blank diagram" src="https://github.com/user-attachments/assets/364c9aac-cb1c-4bfb-be7b-53c448e95b9c" />
+<img width="1680" height="804" alt="Blank diagram(2)" src="https://github.com/user-attachments/assets/f1230cc1-2f95-427a-b65c-6329c3c60a66" />
 
 ## Projektissa käytetyt laitteet
+
 
 | Laite | Käyttötarkoitus |
 |-------|------------------|
