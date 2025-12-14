@@ -140,4 +140,10 @@ Projektissa opittiin yhdistämään useita eri teknologia-alueita:
 
 Kokonaisuutena projekti onnistui hyvin ja tarjosi käytännön kokemusta IoT-järjestelmien rakentamisesta. Tulokset osoittavat, että kevyitä koneoppimismenetelmiä kuten K-means voidaan hyödyntää sulautetuissa ympäristöissä tietyin rajoittein. Projekti muodostaa vahvan pohjan mahdolliselle jatkokehitykselle, kuten reaaliaikaiselle liikkeentunnistukselle tai laajemmalle datankeruu- ja käsittelyjärjestelmälle.
 
-   
+## Tekijät
+
+- **Tuukka Moilanen**
+  Github: https://github.com/TuukkaMoilanen
+
+- **Onni Lehtonen**
+  Github: https://github.com/nvkl
