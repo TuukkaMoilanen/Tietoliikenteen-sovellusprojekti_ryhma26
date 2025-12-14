@@ -142,8 +142,8 @@ Kokonaisuutena projekti onnistui hyvin ja tarjosi käytännön kokemusta IoT-jä
 
 ## Tekijät
 
-**Tuukka Moilanen**
-Github: https://github.com/TuukkaMoilanen
+- **Tuukka Moilanen**  
+  GitHub: https://github.com/TuukkaMoilanen
 
-**Onni Lehtonen**
-Github: https://github.com/nvkl
+- **Onni Lehtonen**  
+  GitHub: https://github.com/nvkl
